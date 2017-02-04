@@ -1,0 +1,26 @@
+[
+    {
+        "label": "Australia",
+        "children": [
+            {
+                "label": "nsw",
+                "children": []
+            },{
+                "label": "qld",
+                "children": []
+            },{
+                "label": "vic",
+                "children": []
+            },{
+                "label": "wa",
+                "children": []
+            },{
+                "label": "nt",
+                "children": []
+            },{
+                "label": "sa",
+                "children": []
+            }
+        ]
+    }
+]
