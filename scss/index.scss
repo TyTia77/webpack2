@@ -2,3 +2,12 @@ h1{
   background-color: green;
   color: white;
 }
+
+.test{
+    background-color: red;
+}
+
+p[selected]{
+    background-color: blue;
+    color: white;
+}
