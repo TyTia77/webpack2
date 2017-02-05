@@ -17,7 +17,7 @@ module.exports = {
             exclude: /(node_modules)/,
             loader: 'babel-loader',
             query: {
-                presets: ['es2015', 'react']
+                presets: ['react', 'es2015']
                 // plugins: ['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy']
             }
         }, {
@@ -27,12 +27,12 @@ module.exports = {
         },
       {
         test:/\.html$/,
-        loader: "raw-loader"
+        loader: 'raw-loader'
       }]
     },
     devServer: {
       contentBase: './',
-      port: '3000',
+      port: 3000,
       inline: true
     },
     plugins: debug ? [] : [

@@ -11,3 +11,27 @@ p[selected]{
     background-color: blue;
     color: white;
 }
+
+.main-container{
+    display: block;
+    position: relative;
+    width: 98%;
+    height: 100px;
+    margin: 0 auto;
+    border: 1px solid red;
+
+}
+
+.sidebar{
+    display: block;
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    left: 0;
+    background-color: green;
+}
+
+.sidebar[open='false']{
+    background-color: red;
+    width: 3%;
+}
