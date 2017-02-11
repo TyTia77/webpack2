@@ -5,4 +5,6 @@ require('../index.html');
 // require('./one.js');
 // require('./two.js');
 // require('./react.js');
-require('./main.js');
+// require('./main.js');
+// require('./redux.js');
+require('./redux_middleware.js');
