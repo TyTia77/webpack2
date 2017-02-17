@@ -1,5 +1,7 @@
-const React = require('react');
-const ReactDom = require('react-dom');
+import React from 'react';
+import ReactDom from 'react-dom';
+import {Provider} from'react-redux';
+import store from '../store'
 
 import Side from './sidebar';
 
@@ -17,4 +19,7 @@ class Main extends React.Component {
 
 const app = document.getElementById('app');
 
-ReactDom.render(<Main/>, app);
+ReactDom.render(
+    <Provider store={store}>
+    <Main/>
+    </Provider>, app);

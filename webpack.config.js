@@ -17,8 +17,8 @@ module.exports = {
             exclude: /(node_modules)/,
             loader: 'babel-loader',
             query: {
-                presets: ['es2015']
-                // plugins: ['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy']
+                presets: ['es2015', 'react', 'stage-0'],
+                plugins: ['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy']
             }
         }, {
             test: /\.scss$/,
