@@ -7,3 +7,13 @@ export function fetchUser() {
         }
     }
 }
+
+export function testUser() {
+    return {
+        type: 'whatever',
+        payload: {
+            name: 'gg',
+            age: 55
+        }
+    }
+}

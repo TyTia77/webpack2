@@ -33,6 +33,7 @@ module.exports = {
     devServer: {
       contentBase: './',
       port: 4000,
+    //   hot: true
       inline: true
     },
     plugins: debug ? [] : [

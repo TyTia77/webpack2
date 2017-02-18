@@ -1,9 +1,9 @@
 import {combineReducers} from 'redux';
 
-// import tweets from './tweetsReducer';
+import menus from './menuReducer';
 import users from './usersReducer';
 
 export default combineReducers({
-    // tweets,
+    menus,
     users
 })

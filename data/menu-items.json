@@ -1,0 +1,15 @@
+[
+    {
+        "id": "1",
+        "label": "main menu",
+        "link":"#"
+    },{
+        "id": "2",
+        "label": "sub menu",
+        "link":"#"
+    },{
+        "id": "3",
+        "label": "contact us",
+        "link":"#"
+    }
+]
