@@ -5,7 +5,6 @@ body{
     margin: 0;
     width: 100%;
     background-color: white;
-    // height: 100vh;
     overflow-y: hidden;
 
     .main-container{
@@ -45,6 +44,7 @@ body{
             overflow-y: auto;
             width: calc(100% - 200px);
         }
+
         .content-container[expand='true']{
             width: calc(100% - 40px);
         }

@@ -10,7 +10,6 @@ import Content from './layout/content/content';
 
 class Main extends React.Component {
     render() {
-
         return (
             <div className='main-container'>
                 <div className='top-container'>
@@ -27,6 +26,7 @@ class Main extends React.Component {
             </div>
         );
     }
+
 }
 
 const app = document.getElementById('app');
