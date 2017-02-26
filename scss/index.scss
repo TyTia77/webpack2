@@ -1,50 +1,52 @@
-h1{
-  background-color: green;
-  color: white;
-}
+$top-bar-height: 50px;
 
-.test{
-    background-color: red;
-}
+body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-color: white;
+    // height: 100vh;
+    overflow-y: hidden;
 
-p[selected]{
-    background-color: blue;
-    color: white;
-}
+    .main-container{
+        position: relative;
+        width: 100%;
+        height: 500px;
+        margin: 0;
 
-.main-container{
-    display: block;
-    position: relative;
-    width: 98%;
-    height: 100px;
-    margin: 0 auto;
-    border: 1px solid red;
-}
+        .top-container{
+            position: fixed;
+            height: $top-bar-height;
+        }
 
-.sidebar{
-    display: block;
-    position: absolute;
-    width: 15%;
-    height: 100%;
-    left: 0;
-    background-color: green;
-}
+        .side-container{
+            position: relative;
+            top: $top-bar-height;
+            float: left;
+            height: 100%;
 
-.sidebar[open='false']{
-    background-color: red;
-    width: 3%;
-}
+            .sidebar{
+                width: 200px;
+                transition-duration: .1s;
+            }
 
-.menu-items{
-    display: block;
-    color: #fff;
-    text-decoration: none;
-    text-transform: capitalize;
-    font-size: 18px;
-    text-align: center;
-}
+            .sidebar[open='false']{
+                width: 40px;
+            }
+        }
 
-.collapsed-menu{
-    color: white;
-    font-size: 2em;
+        .content-container{
+            position: relative;
+            top: $top-bar-height;
+            height: 100%;
+            float: left;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+            width: calc(100% - 200px);
+        }
+        .content-container[expand='true']{
+            width: calc(100% - 40px);
+        }
+    }
 }

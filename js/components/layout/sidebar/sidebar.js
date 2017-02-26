@@ -1,12 +1,14 @@
 import React from 'react'
 import {connect} from 'react-redux'
 
+require('./sidebar.scss');
+
 //users
-import {fetchUser} from '../actions/userActions'
-import {testUser} from '../actions/userActions'
+import {fetchUser} from '../../../actions/userActions'
+import {testUser} from '../../../actions/userActions'
 
 //menu items
-import {getItems} from '../actions/menuActions'
+import {getItems} from '../../../actions/menuActions'
 
 @connect((store) => {
     return {
@@ -31,9 +33,10 @@ export default class SideBar extends React.Component {
     }
 
     // functions
-    _toggle(e){
+    _toggle(){
         this.prop.open = !this.prop.open;
-        var test = document.querySelector('.sidebar').setAttribute('open', this.prop.open);
+        document.querySelector('.sidebar').setAttribute('open', this.prop.open);
+        document.querySelector('.content-container').setAttribute('expand', !this.prop.open);
 
         //force an update on the dom
         // this.setState();
@@ -51,25 +54,26 @@ export default class SideBar extends React.Component {
         const {user, menus} = this.props;
 
         // mapping things in array/object to be repeated in dom
-        const mappedMenuItems = menus.map(e => <a className='menu-items' key={e.id} href={e.link}>{e.label}</a>)
+        const mappedMenuItems = menus.map(e =><div className='menu-items'><span className={e.icon +' menu-items-icons'}></span> <a className='menu-items-link' key={e.id} href={e.link}>{e.label}</a></div>)
 
         if (this.prop.open){
             return (
-                <div className='sidebar' onClick={this._toggle.bind(this)}>
+                <div className='sidebar'>
+                    <div className='toggle-icon-container'>
+                        <span class="fa fa-bars collapsed-menu toggle-icon" aria-hidden="true" onClick={this._toggle.bind(this)}></span>
+                    </div>
                     <nav>
                     {mappedMenuItems}
                     </nav>
-                    <button onClick={this.changeName.bind(this)}>click me</button>
                 </div>
             );
         } else if (!this.prop.open){
             return (
-                <div className='sidebar' onClick={this._toggle.bind(this)}>\
-                    <i class="fa fa-bars collapsed-menu" aria-hidden="true"></i>
+                <div className='sidebar' >\
+                    <span class="fa fa-bars collapsed-menu" aria-hidden="true" onClick={this._toggle.bind(this)}></span>
                 </div>
             )
        }
-
     }
-    
+
 }

@@ -1,15 +1,28 @@
 [
     {
         "id": "1",
-        "label": "main menu",
+        "label": "dashboard",
+        "icon": "fa fa-tachometer",
         "link":"#"
     },{
         "id": "2",
-        "label": "sub menu",
+        "label": "settings",
+        "icon": "fa fa-cog",
         "link":"#"
     },{
         "id": "3",
         "label": "contact us",
+        "icon": "fa fa-address-book-o",
+        "link":"#"
+    },{
+        "id": "4",
+        "label": "about us",
+        "icon": "fa fa-desktop",
+        "link":"#"
+    },{
+        "id": "5",
+        "label": "contact us",
+        "icon": "fa fa-rss",
         "link":"#"
     }
 ]
