@@ -90,7 +90,6 @@ export default class Content extends React.Component {
                     content <br/>
                     content <br/>
                     content <br/>
-
                 </div>
             );
     }

@@ -8,22 +8,25 @@ import Side from './layout/sidebar/sidebar';
 import Top from './layout/topbar/topbar';
 import Content from './layout/content/content';
 
+// require('../../scss/index.scss');
+
+
 class Main extends React.Component {
     render() {
         return (
-            <div className='main-container'>
-                <div className='top-container'>
+            <main>
+                <section id='topbar'>
                     <Top/>
-                </div>
+                </section>
 
-                <div className='side-container'>
+                <section id='sidebar'>
                     <Side/>
-                </div>
+                </section>
 
-                <div className='content-container'>
+                <section id='content'>
                     <Content/>
-                </div>
-            </div>
+                </section>
+            </main>
         );
     }
 

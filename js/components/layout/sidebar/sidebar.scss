@@ -1,14 +1,23 @@
 .sidebar{
     height: 100%;
+    width: 100%;
     background-color: rgba(0,0,0,.8);
+    color: white;
 
-    .toggle-icon-container{
+
+    section{
         display: block;
         margin-bottom: 20px;
 
         .toggle-icon{
+            font-size: 2em;
             float: right;
             padding-right: 7px;
+        }
+
+        &:hover{
+            cursor: pointer;
+            color: orange;
         }
 
         // clear float
@@ -49,12 +58,15 @@
             cursor: pointer;
             background-color: #f00;
         }
+
     }
 
     .collapsed-menu{
         color: white;
-        font-size: 2em;
         transition-duration: .2s;
+        text-align: center;
+        font-size: 2em;
+        padding-left: 4px;
 
         &:hover{
             cursor: pointer;

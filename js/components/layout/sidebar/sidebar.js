@@ -35,8 +35,8 @@ export default class SideBar extends React.Component {
     // functions
     _toggle(){
         this.prop.open = !this.prop.open;
-        document.querySelector('.sidebar').setAttribute('open', this.prop.open);
-        document.querySelector('.content-container').setAttribute('expand', !this.prop.open);
+        document.getElementById('sidebar').setAttribute('open', this.prop.open);
+        document.getElementById('content').setAttribute('expand', !this.prop.open);
 
         //force an update on the dom
         // this.setState();
@@ -59,17 +59,18 @@ export default class SideBar extends React.Component {
         if (this.prop.open){
             return (
                 <div className='sidebar'>
-                    <div className='toggle-icon-container'>
+                    <section>
                         <span class="fa fa-bars collapsed-menu toggle-icon" aria-hidden="true" onClick={this._toggle.bind(this)}></span>
-                    </div>
+                    </section>
+
                     <nav>
-                    {mappedMenuItems}
+                        {mappedMenuItems}
                     </nav>
                 </div>
             );
         } else if (!this.prop.open){
             return (
-                <div className='sidebar' >\
+                <div className='sidebar'>
                     <span class="fa fa-bars collapsed-menu" aria-hidden="true" onClick={this._toggle.bind(this)}></span>
                 </div>
             )

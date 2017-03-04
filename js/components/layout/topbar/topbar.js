@@ -11,9 +11,21 @@ export default class TopBar extends React.Component {
 
     render() {
             return (
-                <div className='topbar'>
-                React Redux
-                </div>
+                <header>
+                    <section>
+                        <label>React Redux</label>
+                    </section>
+
+                    <section>
+                        <nav>
+
+                        </nav>
+                    </section>
+
+                    <section>
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </section>
+                </header>
             );
     }
 }
